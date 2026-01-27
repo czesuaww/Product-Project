@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import type { Product } from '@/types/Product';
-import { onMounted, onUnmounted } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
-
+import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { useProductModal } from '@/composables/useProductModal';
 const props = defineProps<{
     product: Product | null;
     isOpen: boolean;
@@ -14,46 +13,48 @@ const props = defineProps<{
 
 const emit = defineEmits(['close']);
 
-const modules = [Navigation, Pagination];
+const { modalContainer } = useProductModal(() => props.isOpen, () => emit('close'));
 
-const handleKeydown = (e: KeyboardEvent) => {
-    if (e.key === 'Escape' && props.isOpen) emit('close');
-};
-
-onMounted(() => window.addEventListener('keydown', handleKeydown));
-onUnmounted(() => window.removeEventListener('keydown', handleKeydown));
+const modules = [Navigation, Pagination, A11y];
 </script>
 
 <template>
     <Teleport to="body">
         <Transition name="fade">
-            <div v-if="isOpen && product" class="modal" @click.self="emit('close')">
+            <div v-if="isOpen && product" class="modal" ref="modalContainer" tabindex="-1" @click.self="emit('close')">
                 <div class="modal__container">
-                    <button class="modal__close-btn" @click="emit('close')" aria-label="Zamknij modal">&times;</button>
+                    <button class="modal__close-btn" @click="emit('close')" aria-label="Zamknij popup">&times;</button>
 
                     <div class="modal__content">
                         <div class="modal__image-section">
                             <swiper :modules="modules" :slides-per-view="1" :space-between="20" navigation
-                                :pagination="{ clickable: true }" class="product-swiper">
+                                :pagination="{ clickable: true }" :a11y="{
+                                    enabled: true,
+                                    prevSlideMessage: 'Poprzednie zdjęcie',
+                                    nextSlideMessage: 'Następne zdjęcie',
+                                    firstSlideMessage: 'To jest pierwsze zdjęcie',
+                                    lastSlideMessage: 'To jest ostatnie zdjęcie',
+                                    paginationBulletMessage: 'Przejdź do zdjęcia {{index}}'
+                                }" class="product-swiper">
                                 <swiper-slide v-for="(img, index) in product.images.slice(2)" :key="index">
-                                    <img :src="img" :alt="product.name + ' - zdjęcie ' + (index + 1)"
+                                    <img :src="img" :alt="'Zdjęcie produktu ' + (index + 1)" tabindex="0"
                                         class="modal__swiper-img">
                                 </swiper-slide>
                             </swiper>
                         </div>
 
                         <div class="modal__info-section">
-                            <h2 :id="'modal-title-' + product.id" class="modal__title">{{ product.name }}</h2>
-                            <p class="modal__id" :aria-label="'Identyfikator produktu: ' + product.id">
+                            <h2 class="modal__title">{{ product.name }}</h2>
+                            <p class="modal__id">
                                 Id produktu: {{ product.id }}
                             </p>
-                            <p class="modal__code" :aria-label="'Kod produktu: ' + product.code">
+                            <p class="modal__code">
                                 Kod produktu: {{ product.code }}
                             </p>
-                            <p class="modal__price" :aria-label="'Cena: ' + product.price + ' ' + product.currency">
+                            <p class="modal__price">
                                 {{ product.price }} {{ product.currency }}
                             </p>
-                            <p class="modal__delivery" :aria-label="'Czas dostawy: ' + product.deliveryTime">
+                            <p class="modal__delivery">
                                 Dostawa: {{ product.deliveryTime }}
                             </p>
                         </div>

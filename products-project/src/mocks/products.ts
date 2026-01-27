@@ -19,7 +19,7 @@ export const MOCK_PRODUCTS: Product[] = [
     {
         id: 2,
         name: 'Gibson Les Paul Standard 60s',
-        price: 13.899,
+        price: 13899,
         currency: 'PLN',
         images: [
             'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
@@ -49,7 +49,7 @@ export const MOCK_PRODUCTS: Product[] = [
     {
         id: 4,
         name: 'Gibson Les Paul Standard 60s',
-        price: 13.899,
+        price: 13899,
         currency: 'PLN',
         images: [
             'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
@@ -79,7 +79,7 @@ export const MOCK_PRODUCTS: Product[] = [
     {
         id: 6,
         name: 'Gibson Les Paul Standard 60s',
-        price: 13.899,
+        price: 13899,
         currency: 'PLN',
         images: [
             'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
@@ -109,7 +109,7 @@ export const MOCK_PRODUCTS: Product[] = [
     {
         id: 8,
         name: 'Gibson Les Paul Standard 60s',
-        price: 13.899,
+        price: 13899,
         currency: 'PLN',
         images: [
             'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
@@ -139,7 +139,7 @@ export const MOCK_PRODUCTS: Product[] = [
     {
         id: 10,
         name: 'Gibson Les Paul Standard 60s',
-        price: 13.899,
+        price: 13899,
         currency: 'PLN',
         images: [
             'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
@@ -169,7 +169,7 @@ export const MOCK_PRODUCTS: Product[] = [
     {
         id: 12,
         name: 'Gibson Les Paul Standard 60s',
-        price: 13.899,
+        price: 13899,
         currency: 'PLN',
         images: [
             'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
@@ -199,7 +199,7 @@ export const MOCK_PRODUCTS: Product[] = [
     {
         id: 14,
         name: 'Gibson Les Paul Standard 60s',
-        price: 13.899,
+        price: 13899,
         currency: 'PLN',
         images: [
             'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
@@ -229,7 +229,7 @@ export const MOCK_PRODUCTS: Product[] = [
     {
         id: 16,
         name: 'Gibson Les Paul Standard 60s',
-        price: 13.899,
+        price: 13899,
         currency: 'PLN',
         images: [
             'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
