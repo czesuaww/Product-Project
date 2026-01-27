@@ -11,8 +11,8 @@ defineProps<{
         <div class="product-card__image-wrapper">
             <img v-if="product.images && product.images[0]" :src="product.images[0]" :alt="product.name"
                 class="product-card__image product-card__image--primary" />
-            <img v-if="product.images && product.images[1]" :src="product.images[1]" alt="" aria-hidden="true"
-                class="product-card__image product-card__image--secondary" />
+            <img v-if="product.images && product.images[1]" :src="product.images[1]" alt="product.name"
+                aria-hidden="true" class="product-card__image product-card__image--secondary" />
         </div>
 
         <div class="product-card__content">
@@ -89,12 +89,24 @@ defineProps<{
         gap: 0.8rem;
     }
 
+
     &__name {
         margin: 0;
         font-size: 1.8rem;
         line-height: 1.4;
         font-weight: 600;
         color: $color-text-name;
+        position: relative;
+        z-index: 5;
+    }
+
+    &__price {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 700;
+        color: $color-primary;
+        position: relative;
+        z-index: 5;
     }
 
     &__link {
@@ -109,7 +121,7 @@ defineProps<{
             left: 0;
             right: 0;
             bottom: 0;
-            z-index: 4;
+            z-index: 1;
         }
 
         &:focus-visible::after {
@@ -119,11 +131,5 @@ defineProps<{
         }
     }
 
-    &__price {
-        margin: 0;
-        font-size: 2rem;
-        font-weight: 700;
-        color: $color-primary;
-    }
 }
 </style>

@@ -29,24 +29,33 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown));
         <Transition name="fade">
             <div v-if="isOpen && product" class="modal" @click.self="emit('close')">
                 <div class="modal__container">
-                    <button class="modal__close-btn" @click="emit('close')">&times;</button>
+                    <button class="modal__close-btn" @click="emit('close')" aria-label="Zamknij modal">&times;</button>
 
                     <div class="modal__content">
                         <div class="modal__image-section">
                             <swiper :modules="modules" :slides-per-view="1" :space-between="20" navigation
                                 :pagination="{ clickable: true }" class="product-swiper">
                                 <swiper-slide v-for="(img, index) in product.images.slice(2)" :key="index">
-                                    <img :src="img" :alt="product.name" class="modal__swiper-img">
+                                    <img :src="img" :alt="product.name + ' - zdjęcie ' + (index + 1)"
+                                        class="modal__swiper-img">
                                 </swiper-slide>
                             </swiper>
                         </div>
 
                         <div class="modal__info-section">
-                            <h2 class="modal__title">{{ product.name }}</h2>
-                            <p class="modal__id">Id produktu: {{ product.id }}</p>
-                            <p class="modal__code">Kod produktu: {{ product.code }}</p>
-                            <p class="modal__price">{{ product.price }} {{ product.currency }}</p>
-                            <p class="modal__delivery">Dostawa: {{ product.deliveryTime }}</p>
+                            <h2 :id="'modal-title-' + product.id" class="modal__title">{{ product.name }}</h2>
+                            <p class="modal__id" :aria-label="'Identyfikator produktu: ' + product.id">
+                                Id produktu: {{ product.id }}
+                            </p>
+                            <p class="modal__code" :aria-label="'Kod produktu: ' + product.code">
+                                Kod produktu: {{ product.code }}
+                            </p>
+                            <p class="modal__price" :aria-label="'Cena: ' + product.price + ' ' + product.currency">
+                                {{ product.price }} {{ product.currency }}
+                            </p>
+                            <p class="modal__delivery" :aria-label="'Czas dostawy: ' + product.deliveryTime">
+                                Dostawa: {{ product.deliveryTime }}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -103,8 +112,8 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown));
 
     &__close-btn {
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 10px;
+        right: 10px;
         background: $color-white;
         border-radius: 50%;
         width: 40px;

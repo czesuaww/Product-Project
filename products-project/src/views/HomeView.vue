@@ -16,12 +16,13 @@ const {
 <template>
     <div class="home-view">
         <div v-if="loading" class="home-view__loader">Ładowanie...</div>
-
-        <div v-else class="home-view__grid">
-            <ProductCard v-for="product in products" :key="product.id" :product="product" class="home-view__card"
-                @click="openModal(product)" />
+        <div v-else class="home-view__content">
+            <h1 class="home-view__title">Gitarowe produkty</h1>
+            <div class="home-view__grid">
+                <ProductCard v-for="product in products" :key="product.id" :product="product" class="home-view__card"
+                    @click="openModal(product)" />
+            </div>
         </div>
-
         <ProductModal :product="selectedProduct" :is-open="isModalOpen" @close="closeModal" />
     </div>
 </template>
@@ -39,6 +40,14 @@ const {
         font-size: 2rem;
         padding: 4rem;
         color: $color-loader;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: $color-text-main;
+        margin-bottom: 4rem;
+        font-weight: 700;
     }
 
     &__grid {

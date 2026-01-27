@@ -35,8 +35,8 @@ export function useProducts() {
     return {
         products,
         loading,
-        selectedProduct, // teraz to Computed
-        isModalOpen,     // teraz to Computed
+        selectedProduct,
+        isModalOpen,
         openModal,
         closeModal
     };
