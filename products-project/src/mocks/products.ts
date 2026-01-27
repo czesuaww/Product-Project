@@ -1,0 +1,244 @@
+import type { Product } from '@/types/Product';
+
+export const MOCK_PRODUCTS: Product[] = [
+    {
+        id: 1,
+        name: 'Arrow Tonecaster ST 211',
+        price: 512,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/177148-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177149-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177150-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177151-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177152-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+        ],
+        code: 'ARROW-PL-STRAT-01',
+        deliveryTime: '2-3 dni'
+    },
+    {
+        id: 2,
+        name: 'Gibson Les Paul Standard 60s',
+        price: 13.899,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115555-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115561-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115557-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115559-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+        ],
+        code: 'GIBSON-PL-STRAT-01',
+        deliveryTime: 'jutro'
+    },
+    {
+        id: 3,
+        name: 'Arrow Tonecaster ST 211',
+        price: 512,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/177148-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177149-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177150-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177151-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177152-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+        ],
+        code: 'ARROW-PL-STRAT-01',
+        deliveryTime: '2-3 dni'
+    },
+    {
+        id: 4,
+        name: 'Gibson Les Paul Standard 60s',
+        price: 13.899,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115555-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115561-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115557-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115559-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+        ],
+        code: 'GIBSON-PL-STRAT-01',
+        deliveryTime: 'jutro'
+    },
+    {
+        id: 5,
+        name: 'Arrow Tonecaster ST 211',
+        price: 512,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/177148-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177149-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177150-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177151-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177152-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+        ],
+        code: 'ARROW-PL-STRAT-01',
+        deliveryTime: '2-3 dni'
+    },
+    {
+        id: 6,
+        name: 'Gibson Les Paul Standard 60s',
+        price: 13.899,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115555-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115561-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115557-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115559-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+        ],
+        code: 'GIBSON-PL-STRAT-01',
+        deliveryTime: 'jutro'
+    },
+    {
+        id: 7,
+        name: 'Arrow Tonecaster ST 211',
+        price: 512,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/177148-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177149-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177150-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177151-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177152-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+        ],
+        code: 'ARROW-PL-STRAT-01',
+        deliveryTime: '2-3 dni'
+    },
+    {
+        id: 8,
+        name: 'Gibson Les Paul Standard 60s',
+        price: 13.899,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115555-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115561-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115557-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115559-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+        ],
+        code: 'GIBSON-PL-STRAT-01',
+        deliveryTime: 'jutro'
+    },
+    {
+        id: 8,
+        name: 'Arrow Tonecaster ST 211',
+        price: 512,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/177148-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177149-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177150-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177151-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177152-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+        ],
+        code: 'ARROW-PL-STRAT-01',
+        deliveryTime: '2-3 dni'
+    },
+    {
+        id: 10,
+        name: 'Gibson Les Paul Standard 60s',
+        price: 13.899,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115555-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115561-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115557-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115559-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+        ],
+        code: 'GIBSON-PL-STRAT-01',
+        deliveryTime: 'jutro'
+    },
+    {
+        id: 11,
+        name: 'Arrow Tonecaster ST 211',
+        price: 512,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/177148-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177149-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177150-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177151-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177152-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+        ],
+        code: 'ARROW-PL-STRAT-01',
+        deliveryTime: '2-3 dni'
+    },
+    {
+        id: 12,
+        name: 'Gibson Les Paul Standard 60s',
+        price: 13.899,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115555-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115561-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115557-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115559-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+        ],
+        code: 'GIBSON-PL-STRAT-01',
+        deliveryTime: 'jutro'
+    },
+    {
+        id: 13,
+        name: 'Arrow Tonecaster ST 211',
+        price: 512,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/177148-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177149-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177150-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177151-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177152-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+        ],
+        code: 'ARROW-PL-STRAT-01',
+        deliveryTime: '2-3 dni'
+    },
+    {
+        id: 14,
+        name: 'Gibson Les Paul Standard 60s',
+        price: 13.899,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115555-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115561-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115557-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115559-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+        ],
+        code: 'GIBSON-PL-STRAT-01',
+        deliveryTime: 'jutro'
+    },
+    {
+        id: 15,
+        name: 'Arrow Tonecaster ST 211',
+        price: 512,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/177148-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177149-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177150-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177151-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+            'https://sklepmuzyczny.pl/177152-medium_default/arrow-tonecaster-st-211-biscuit-rosewood-white-gitara-elektryczna.webp',
+        ],
+        code: 'ARROW-PL-STRAT-01',
+        deliveryTime: '2-3 dni'
+    },
+    {
+        id: 16,
+        name: 'Gibson Les Paul Standard 60s',
+        price: 13.899,
+        currency: 'PLN',
+        images: [
+            'https://sklepmuzyczny.pl/115562-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115555-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115561-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115557-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+            'https://sklepmuzyczny.pl/115559-medium_default/gibson-les-paul-standard-60s-figured-top-translucent-oxblood.webp',
+        ],
+        code: 'GIBSON-PL-STRAT-01',
+        deliveryTime: 'jutro'
+    },
+]
