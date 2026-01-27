@@ -93,8 +93,7 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown));
         border-radius: 16px;
         box-shadow: $shadow-modal;
         width: 100%;
-        max-width: 900px;
-        max-height: 90vh;
+        max-width: 800px;
         display: flex;
         flex-direction: column;
         overflow-x: hidden;
@@ -168,7 +167,7 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown));
         padding: 2.5rem;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 10px;
         width: 100%;
         box-sizing: border-box;
         min-width: 0;
@@ -176,6 +175,7 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown));
         @media (min-width: 768px) {
             padding: 4rem;
             justify-content: center;
+            gap: 30px;
         }
     }
 
@@ -196,6 +196,10 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown));
         color: $color-text-muted;
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
+
+        @media (min-width: 768px) {
+            font-size: 1.5rem;
+        }
     }
 
     &__price {
