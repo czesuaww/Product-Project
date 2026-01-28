@@ -12,19 +12,10 @@ const emit = defineEmits(['click'])
   <article class="product-card">
     <div class="product-card__image-wrapper">
       <a href="#" class="product-card__link" @click.prevent="emit('click', product)">
-        <img
-          v-if="product.images && product.images[0]"
-          :src="product.images[0]"
-          :alt="product.name"
-          class="product-card__image product-card__image--primary"
-        />
-        <img
-          v-if="product.images && product.images[1]"
-          :src="product.images[1]"
-          alt="product.name"
-          aria-hidden="true"
-          class="product-card__image product-card__image--secondary"
-        />
+        <img v-if="product.images && product.images[0]" :src="product.images[0]" :alt="product.name"
+          class="product-card__image product-card__image--primary" />
+        <img v-if="product.images && product.images[1]" :src="product.images[1]" alt="product.name" aria-hidden="true"
+          class="product-card__image product-card__image--secondary" />
       </a>
     </div>
     <div class="product-card__content">
@@ -82,6 +73,7 @@ const emit = defineEmits(['click'])
     height: 100%;
     object-fit: contain;
     transition: opacity 0.4s ease;
+    cursor: pointer;
 
     &--primary {
       z-index: 2;
@@ -105,6 +97,7 @@ const emit = defineEmits(['click'])
     margin: 0;
     font-size: 1.8rem;
     line-height: 1.4;
+    min-height: 55px;
     font-weight: 600;
     color: $color-text-name;
     position: relative;
