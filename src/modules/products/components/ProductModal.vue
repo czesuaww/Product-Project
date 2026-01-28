@@ -12,7 +12,6 @@ const props = defineProps<{
   product: Product | null
   isOpen: boolean
 }>()
-console.log(props.product, 'product')
 
 const emit = defineEmits(['close'])
 
@@ -36,13 +35,7 @@ const swiperA11yConfig = {
 <template>
   <Teleport to="body">
     <Transition name="fade">
-      <div
-        v-if="isOpen && product"
-        class="modal"
-        ref="modalContainer"
-        tabindex="-1"
-        @click.self="emit('close')"
-      >
+      <div v-if="isOpen && product" class="modal" ref="modalContainer" tabindex="-1" @click.self="emit('close')">
         <div class="modal__container">
           <button class="modal__close-btn" @click="emit('close')" aria-label="Zamknij popup">
             &times;
@@ -50,22 +43,10 @@ const swiperA11yConfig = {
 
           <div class="modal__content">
             <div class="modal__image-section">
-              <swiper
-                :modules="modules"
-                :slides-per-view="1"
-                :space-between="20"
-                navigation
-                :pagination="{ clickable: true }"
-                :a11y="swiperA11yConfig"
-                class="product-swiper"
-              >
+              <swiper :modules="modules" :slides-per-view="1" :space-between="20" navigation
+                :pagination="{ clickable: true }" :a11y="swiperA11yConfig" class="product-swiper">
                 <swiper-slide v-for="(img, index) in product.images.slice(2)" :key="index">
-                  <img
-                    :src="img"
-                    :alt="'Zdjęcie produktu ' + (index + 1)"
-                    tabindex="0"
-                    class="modal__swiper-img"
-                  />
+                  <img :src="img" :alt="'Zdjęcie produktu ' + (index + 1)" tabindex="0" class="modal__swiper-img" />
                 </swiper-slide>
               </swiper>
             </div>
