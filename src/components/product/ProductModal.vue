@@ -10,6 +10,7 @@ const props = defineProps<{
     product: Product | null;
     isOpen: boolean;
 }>();
+console.log(props.product, 'product')
 
 const emit = defineEmits(['close']);
 

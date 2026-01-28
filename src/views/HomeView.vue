@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import { useProducts } from '@/composables/useProducts';
-import ProductCard from '@/components/ProductCard.vue';
-import ProductModal from '@/components/ProductModal.vue';
+import ProductCard from '@/components/product/ProductCard.vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter(); // Inicjalizacja
 const {
     products,
     loading,
-    selectedProduct,
-    isModalOpen,
-    openModal,
-    closeModal
 } = useProducts();
 </script>
 
@@ -19,11 +16,11 @@ const {
         <div v-else class="home-view__content">
             <h1 class="home-view__title">Gitarowe produkty</h1>
             <div class="home-view__grid">
-                <ProductCard v-for="product in products" :key="product.id" :product="product" class="home-view__card"
-                    @click="openModal(product)" />
+                <ProductCard v-for="product in products" :key="product.id" :product="product"
+                    @click="router.push({ name: 'product-details', params: { id: product.id } })" />
             </div>
         </div>
-        <ProductModal :product="selectedProduct" :is-open="isModalOpen" @close="closeModal" />
+        <!-- <ProductModal :product="selectedProduct" :is-open="isModalOpen" @close="closeModal" /> -->
     </div>
 </template>
 
