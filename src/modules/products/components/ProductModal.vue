@@ -55,14 +55,14 @@ const swiperA11yConfig = {
                 :space-between="20"
                 navigation
                 :pagination="{ clickable: true }"
+                tabindex="0"
                 :a11y="swiperA11yConfig"
                 class="product-swiper"
               >
                 <swiper-slide v-for="(img, index) in product.images.slice(2)" :key="index">
                   <img
                     :src="img"
-                    :alt="'Zdjęcie produktu ' + (index + 1)"
-                    tabindex="0"
+                    :alt="`Zdjęcie ${index + 1} produktu ${product.name}`"
                     class="modal__swiper-img"
                     loading="lazy"
                   />

@@ -32,9 +32,7 @@ const emit = defineEmits<{ (e: 'click', product: Product): void }>()
     </div>
     <div class="product-card__content">
       <h2 class="product-card__name">
-        <a href="#" class="product-card__link" @click.prevent="emit('click', product)">
-          {{ product.name }}
-        </a>
+        {{ product.name }}
       </h2>
       <p class="product-card__price">{{ formatPrice(product.price) }} {{ product.currency }}</p>
     </div>
@@ -137,12 +135,12 @@ const emit = defineEmits<{ (e: 'click', product: Product): void }>()
       left: 0;
       right: 0;
       bottom: 0;
-      z-index: 1;
+      z-index: 4;
     }
 
     &:focus-visible::after {
       outline: 3px solid $color-primary;
-      outline-offset: -3px;
+      outline-offset: -4px;
       border-radius: 12px;
     }
   }
