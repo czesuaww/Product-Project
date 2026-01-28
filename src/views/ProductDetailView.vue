@@ -3,15 +3,20 @@ import { useRoute, useRouter } from 'vue-router'
 import { computed } from 'vue'
 import { MOCK_PRODUCTS } from '@/modules/products/mocks/products'
 import ProductModal from '@/modules/products/components/ProductModal.vue'
+import type { Product } from '@/modules/products/types/Product'
 
 const route = useRoute()
 const router = useRouter()
 
-const productId = computed(() => Number(route.params.id))
+const productId = computed<number>(() => Number(route.params.id))
 
-const product = computed(() => MOCK_PRODUCTS.find((p) => p.id === productId.value) || null)
+const product = computed<Product | null>(
+  () => MOCK_PRODUCTS.find((p) => p.id === productId.value) || null,
+)
 
-const handleClose = () => router.push({ name: 'home' })
+const handleClose = (): void => {
+  router.push({ name: 'home' })
+}
 </script>
 
 <template>

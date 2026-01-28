@@ -3,7 +3,7 @@ import { useProducts } from '@/modules/products/composables/useProducts'
 import ProductCard from '@/modules/products/components/ProductCard.vue'
 import { useRouter } from 'vue-router'
 
-const router = useRouter() // Inicjalizacja
+const router = useRouter()
 const { products, loading } = useProducts()
 </script>
 
@@ -21,7 +21,6 @@ const { products, loading } = useProducts()
         />
       </div>
     </div>
-    <!-- <ProductModal :product="selectedProduct" :is-open="isModalOpen" @close="closeModal" /> -->
   </div>
 </template>
 

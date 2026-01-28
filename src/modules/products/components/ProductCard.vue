@@ -5,17 +5,27 @@ import { formatPrice } from '@/utils/formatters'
 defineProps<{
   product: Product
 }>()
-const emit = defineEmits(['click'])
+
+const emit = defineEmits<{ (e: 'click', product: Product): void }>()
 </script>
 
 <template>
   <article class="product-card">
     <div class="product-card__image-wrapper">
       <a href="#" class="product-card__link" @click.prevent="emit('click', product)">
-        <img v-if="product.images && product.images[0]" :src="product.images[0]" :alt="product.name"
-          class="product-card__image product-card__image--primary" />
-        <img v-if="product.images && product.images[1]" :src="product.images[1]" alt="product.name" aria-hidden="true"
-          class="product-card__image product-card__image--secondary" />
+        <img
+          v-if="product.images && product.images[0]"
+          :src="product.images[0]"
+          :alt="product.name"
+          class="product-card__image product-card__image--primary"
+        />
+        <img
+          v-if="product.images && product.images[1]"
+          :src="product.images[1]"
+          alt="product.name"
+          aria-hidden="true"
+          class="product-card__image product-card__image--secondary"
+        />
       </a>
     </div>
     <div class="product-card__content">
