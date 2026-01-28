@@ -64,6 +64,7 @@ const swiperA11yConfig = {
                     :alt="'Zdjęcie produktu ' + (index + 1)"
                     tabindex="0"
                     class="modal__swiper-img"
+                    loading="lazy"
                   />
                 </swiper-slide>
               </swiper>

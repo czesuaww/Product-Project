@@ -17,6 +17,7 @@ const emit = defineEmits<{ (e: 'click', product: Product): void }>()
           v-if="product.images && product.images[0]"
           :src="product.images[0]"
           :alt="product.name"
+          loading="lazy"
           class="product-card__image product-card__image--primary"
         />
         <img
@@ -24,6 +25,7 @@ const emit = defineEmits<{ (e: 'click', product: Product): void }>()
           :src="product.images[1]"
           alt="product.name"
           aria-hidden="true"
+          loading="lazy"
           class="product-card__image product-card__image--secondary"
         />
       </a>
