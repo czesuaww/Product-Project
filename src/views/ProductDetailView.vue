@@ -24,8 +24,39 @@ const handleClose = (): void => {
     <ProductModal :product="product" :isOpen="true" @close="handleClose" />
 
     <div v-if="!product" class="not-found">
-      <p>Nie ma takiego produktu.</p>
-      <router-link to="/">Wróć do listy produktów</router-link>
+      <p class="not-found__text">Nie ma takiego produktu.</p>
+      <router-link to="/" class="not-found__link"> Wróć do listy produktów </router-link>
     </div>
   </main>
 </template>
+<style lang="scss" scoped>
+@use '@/assets/scss/_variables.scss' as *;
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+
+  &__text {
+    color: $color-text-dark;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__link {
+    color: $color-primary;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.6rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: $color-primary;
+    }
+  }
+}
+</style>
