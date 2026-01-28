@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { Product } from '@/types/Product'
+import type { Product } from '@/modules/products/types/Product'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Navigation, Pagination, A11y } from 'swiper/modules'
-import { useProductModal } from '@/composables/useProductModal'
+import { useProductModal } from '@/modules/products/composables/useProductModal'
 import { formatPrice } from '@/utils/formatters'
 
 const props = defineProps<{
@@ -22,6 +22,15 @@ const { modalContainer } = useProductModal(
 )
 
 const modules = [Navigation, Pagination, A11y]
+
+const swiperA11yConfig = {
+  enabled: true,
+  prevSlideMessage: 'Poprzednie zdjęcie',
+  nextSlideMessage: 'Następne zdjęcie',
+  firstSlideMessage: 'To jest pierwsze zdjęcie',
+  lastSlideMessage: 'To jest ostatnie zdjęcie',
+  paginationBulletMessage: 'Przejdź do zdjęcia {{index}}',
+}
 </script>
 
 <template>
@@ -47,14 +56,7 @@ const modules = [Navigation, Pagination, A11y]
                 :space-between="20"
                 navigation
                 :pagination="{ clickable: true }"
-                :a11y="{
-                  enabled: true,
-                  prevSlideMessage: 'Poprzednie zdjęcie',
-                  nextSlideMessage: 'Następne zdjęcie',
-                  firstSlideMessage: 'To jest pierwsze zdjęcie',
-                  lastSlideMessage: 'To jest ostatnie zdjęcie',
-                  paginationBulletMessage: 'Przejdź do zdjęcia {{index}}',
-                }"
+                :a11y="swiperA11yConfig"
                 class="product-swiper"
               >
                 <swiper-slide v-for="(img, index) in product.images.slice(2)" :key="index">

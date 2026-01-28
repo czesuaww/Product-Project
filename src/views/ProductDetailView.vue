@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router'
 import { computed } from 'vue'
-import { MOCK_PRODUCTS } from '@/mocks/products'
-import ProductModal from '@/components/product/ProductModal.vue'
+import { MOCK_PRODUCTS } from '@/modules/products/mocks/products'
+import ProductModal from '@/modules/products/components/ProductModal.vue'
 
 const route = useRoute()
 const router = useRouter()

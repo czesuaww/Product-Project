@@ -1,6 +1,6 @@
 import { ref } from 'vue'
-import type { Product } from '@/types/Product'
-import { MOCK_PRODUCTS } from '@/mocks/products'
+import type { Product } from '@/modules/products/types/Product'
+import { MOCK_PRODUCTS } from '@/modules/products/mocks/products'
 
 export function useProducts() {
   const products = ref<Product[]>([])

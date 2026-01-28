@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useProducts } from '@/composables/useProducts'
-import ProductCard from '@/components/product/ProductCard.vue'
+import { useProducts } from '@/modules/products/composables/useProducts'
+import ProductCard from '@/modules/products/components/ProductCard.vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter() // Inicjalizacja

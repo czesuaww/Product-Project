@@ -1,33 +1,35 @@
 <script setup lang="ts">
-import type { Product } from '../../types/Product'
+import type { Product } from '../types/Product'
 import { formatPrice } from '@/utils/formatters'
 
 defineProps<{
   product: Product
 }>()
+const emit = defineEmits(['click'])
 </script>
 
 <template>
   <article class="product-card">
     <div class="product-card__image-wrapper">
-      <img
-        v-if="product.images && product.images[0]"
-        :src="product.images[0]"
-        :alt="product.name"
-        class="product-card__image product-card__image--primary"
-      />
-      <img
-        v-if="product.images && product.images[1]"
-        :src="product.images[1]"
-        alt="product.name"
-        aria-hidden="true"
-        class="product-card__image product-card__image--secondary"
-      />
+      <a href="#" class="product-card__link" @click.prevent="emit('click', product)">
+        <img
+          v-if="product.images && product.images[0]"
+          :src="product.images[0]"
+          :alt="product.name"
+          class="product-card__image product-card__image--primary"
+        />
+        <img
+          v-if="product.images && product.images[1]"
+          :src="product.images[1]"
+          alt="product.name"
+          aria-hidden="true"
+          class="product-card__image product-card__image--secondary"
+        />
+      </a>
     </div>
-
     <div class="product-card__content">
       <h2 class="product-card__name">
-        <a href="#" class="product-card__link" @click.prevent="$emit('click', product)">
+        <a href="#" class="product-card__link" @click.prevent="emit('click', product)">
           {{ product.name }}
         </a>
       </h2>
